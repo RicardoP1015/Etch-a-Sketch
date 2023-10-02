@@ -1,4 +1,11 @@
 const etchSketch = document.querySelector('.etch-sketch-container');
+const gridSizeDisplay = document.querySelector('.grid-size')
+const subBtn = document.querySelector('.minus');
+const addBtn = document.querySelector('.add');
+const restBtn = document.getElementById('rest-btn');
+let currentGridSize = 16;
+const defaultGridSize = currentGridSize;
+
 
 const createBlock = (blockSize) => {
     const newBlock = document.createElement('div');
@@ -17,4 +24,40 @@ const createEtchGrid = (amount) => {
     }
 }
 
-createEtchGrid(4);
+const clearGrid = () => {
+    while (etchSketch.firstChild) {
+        etchSketch.removeChild(etchSketch.lastChild);
+    }
+    createEtchGrid(currentGridSize)
+} 
+
+const subValue = () => {
+    if (currentGridSize > 4) {
+        currentGridSize -= 4;
+    }
+    clearGrid()
+    gridSizeDisplay.textContent = `${currentGridSize}x${currentGridSize}`;
+    createEtchGrid(currentGridSize);
+    clearGrid();
+}
+
+const addValue = () => {
+    if (currentGridSize < 100) {
+        currentGridSize += 4
+    }
+    gridSizeDisplay.textContent = `${currentGridSize}x${currentGridSize}`;
+    createEtchGrid(currentGridSize);
+    clearGrid();
+}
+
+const restGrid = () => {
+    currentGridSize = defaultGridSize;
+    gridSizeDisplay.textContent = `${currentGridSize}x${currentGridSize}`;
+    clearGrid()
+}
+
+createEtchGrid(defaultGridSize);
+
+subBtn.addEventListener('click', subValue);
+addBtn.addEventListener('click', addValue);
+restBtn.addEventListener('click', restGrid);
