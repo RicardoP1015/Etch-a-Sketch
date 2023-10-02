@@ -8,12 +8,20 @@
     <title>Etch-a-Sketch</title>
 </head>
 <body>
-    <h1>Etch-a-Sketch</h1>
+    <div class="header-wrapper">
+        <h1>Etch-a-Sketch</h1>
+    </div> 
     <div class="container">
         <div class="side-bar">
             <button class="btn">Color-Black</button>
             <button class="btn">RGB</button>
             <button class="btn">Reset</button>
+            <div class="size-input-wrapper">
+                <button class="btn round-btn"></button>
+                <label for="grid-size"></label>
+                <input type="number" name="grid-size" id="grid-size">
+                <button class="btn round-btn"></button>
+            </div>
         </div>
         <div class="etch-sketch-container"></div>
     </div>

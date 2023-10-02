@@ -1,6 +1,15 @@
-* {
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-left: 15%;
 }
 
 h1 {
@@ -11,16 +20,17 @@ h1 {
 
 .container {
     display: flex;
+    justify-content: center;
 }
 
 .side-bar {
     background-color: firebrick;
     display: flex;
-    justify-content: flex-start;
     padding: 20px;
     flex-direction: column;
     margin: 0 1%;
     border: 5px solid black;
+    align-items: center;
 }
 
 .btn {
@@ -30,17 +40,38 @@ h1 {
     background-color: white;
     font-weight: 700;
     margin: 5px 0;
-    border: 2px solid black;
+    border: 3px solid black;
+}
+
+.round-btn {
+    border-radius: 50%;
+    width: 50px;
+    padding: 20px;
+}
+
+.size-input-wrapper {
+    display: flex;
+    align-items: center;
 }
 
 .etch-sketch-container {
     border: 5px solid black;
     border-radius: 1rem;
-    width: 75rem;
+    width: 45rem;
     height: 45rem;
     position: relative;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     margin: 0 1%;
+}
+
+.block {
+    border: 0.1px solid black;
+}
+
+#grid-size {
+    width: 150px;
+    padding: 10px;
+    border: 3px solid black;
 }
