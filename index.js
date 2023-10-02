@@ -1,5 +1,7 @@
 const etchSketch = document.querySelector('.etch-sketch-container');
 const gridSizeDisplay = document.querySelector('.grid-size')
+const blackColor = document.getElementById('color-black-btn');
+const rgbBtn = document.getElementById('rgb-btn');
 const subBtn = document.getElementById('sub-btn');
 const addBtn = document.getElementById('add-btn');
 const restBtn = document.getElementById('rest-btn');
@@ -72,8 +74,6 @@ const removeHoverEffect = (side) => {
     side.style.color = 'transparent';
 };
 
-createEtchGrid(defaultGridSize);
-
 subBtn.addEventListener('click', subValue);
 subBtn.addEventListener('mouseover', () => {
     HoverEffect(left);
@@ -90,3 +90,11 @@ addBtn.addEventListener('mouseout', () => {
 });
 restBtn.addEventListener('click', restGrid);
 clearBtn.addEventListener('click', clearGrid);
+blackColor.addEventListener('click', () => {
+    selectedColor = 'black'
+});
+rgbBtn.addEventListener('change', () => {
+    selectedColor = rgbBtn.value;
+});
+
+createEtchGrid(defaultGridSize);
