@@ -6,8 +6,8 @@ const subBtn = document.getElementById('sub-btn');
 const addBtn = document.getElementById('add-btn');
 const restBtn = document.getElementById('rest-btn');
 const clearBtn = document.getElementById('clear-btn');
-const left = document.querySelector('.left');
-const right = document.querySelector('.right');
+const minus = document.querySelector('.minus');
+const plus = document.querySelector('.plus');
 
 let selectedColor = 'black';
 let currentGridSize = 16;
@@ -76,17 +76,17 @@ const removeHoverEffect = (side) => {
 
 subBtn.addEventListener('click', subValue);
 subBtn.addEventListener('mouseover', () => {
-    HoverEffect(left);
+    HoverEffect(minus);
 });
 subBtn.addEventListener('mouseout', () => {
-    removeHoverEffect(left);
+    removeHoverEffect(minus);
 });
 addBtn.addEventListener('click', addValue);
 addBtn.addEventListener('mouseover', () => {
-    HoverEffect(right);
+    HoverEffect(plus);
 });
 addBtn.addEventListener('mouseout', () => {
-    removeHoverEffect(right);
+    removeHoverEffect(plus);
 });
 restBtn.addEventListener('click', restGrid);
 clearBtn.addEventListener('click', clearGrid);

@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/00af512445.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
     <script src="index.js" defer></script>
     <title>Etch-a-Sketch</title>
 </head>
@@ -13,17 +15,17 @@
     </div> 
     <div class="container">
         <div class="side-bar">
-            <button id="color-black-btn" class="btn">Color-Black</button>
-            <div class="rgb-wrapper">
+            <button id="color-black-btn" class="pixle btn">Color-Black</button>
+            <div class="rgb-wrapper pixle">
                 <label for="rgb">RGB</label>
             <input type="color" id="rgb-btn">
             </div>
-            <button id="clear-btn" class="btn">Clear</button>
-            <button id="rest-btn" class="btn">Reset</button>
+            <button id="clear-btn" class="btn pixle">Clear</button>
+            <button id="rest-btn" class="btn pixle">Reset</button>
             <div class="size-input-wrapper">
-                <button id="sub-btn" class="btn round-btn"><span class="left"><</span></button>
-                <div class="grid-size">16x16</div>
-                <button id="add-btn" class="btn round-btn"><span class="right">></span></button>
+                <button id="sub-btn" class="btn round-btn"><span class="minus"><i class="fa-solid fa-minus"></i></span></button>
+                <div class="grid-size pixle">16x16</div>
+                <button id="add-btn" class="btn round-btn"><span class="plus"><i class="fa-solid fa-plus"></i></span></button>
             </div>
         </div>
         <div class="etch-sketch-container"></div>

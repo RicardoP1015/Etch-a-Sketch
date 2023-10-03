@@ -6,16 +6,24 @@
     padding: 0;
 }
 
+body {
+    background-image: url(https://images.unsplash.com/photo-1623910270913-3e0294a1c765?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2048&q=80);
+    background-position: center;
+    background-size: contain;
+}
+
 .header-wrapper {
     display: flex;
     justify-content: center;
-    margin-left: 15%;
+    margin-left: 21%;
 }
 
 h1 {
     font-size: 70px;
     text-align: center;
     margin: 10px 0;
+    color: white;
+    font-family: 'Pixelify Sans', cursive;
 }
 
 .container {
@@ -31,6 +39,7 @@ h1 {
     margin: 0 1%;
     border: 5px solid black;
     align-items: center;
+    height: fit-content;
 }
 
 .btn {
@@ -83,14 +92,15 @@ h1 {
     position: relative;
 }
 
-.left,
-.right {
+.minus,
+.plus {
     position: absolute;
-    left: 30%;
+    left: 21%;
     color: transparent;
     bottom: 5%;
     font-size: 30px;
     transition: color 0.7s ease, font-size 0.7s ease;
+    font-family: sans-serif;
 }
 
 .grid-size {
@@ -105,7 +115,6 @@ h1 {
 
 .etch-sketch-container {
     border: 5px solid black;
-    border-radius: 1rem;
     width: 45rem;
     height: 45rem;
     position: relative;
@@ -117,4 +126,9 @@ h1 {
 
 .block {
     border: 0.1px solid black;
+    background-color: white;
+}
+
+.pixle {
+    font-family: 'Pixelify Sans', cursive;
 }
